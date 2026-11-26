@@ -1,4 +1,5 @@
 import math
+import pandas as pd
 from statistics import NormalDist
 
 z = NormalDist().inv_cdf
@@ -20,8 +21,6 @@ def mde_for_n(sigma: float, n: int, alpha: float = 0.05,
 
     return (za + zb) * sigma * math.sqrt(2 / n)
 
-
-import pandas as pd
 
 
 def diff_ci(t: pd.Series, c: pd.Series, alpha: float = 0.05) -> dict:
